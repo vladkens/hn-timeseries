@@ -1,0 +1,32 @@
+# https://fly.io/docs/reference/configuration/
+app = 'ynews'
+primary_region = 'ams'
+
+[[mounts]]
+source = 'sqlite_data'
+destination = '/data'
+
+[[vm]]
+size = 'shared-cpu-1x'
+memory = '256mb'
+cpus = 1
+
+[http_service]
+internal_port = 8080
+force_https = true
+auto_stop_machines = 'off'
+auto_start_machines = true
+min_machines_running = 0
+processes = ['app']
+
+[[http_service.checks]]
+interval = '30s'
+timeout = '5s'
+grace_period = '10s'
+method = 'GET'
+path = '/health'
+
+[env]
+DB_PATH = "/data/ynews.db"
+PUBLIC_URL = "https://ynews.top"
+TG_CHANNEL = "@ynews_top"
