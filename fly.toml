@@ -30,3 +30,4 @@ path = '/health'
 DB_PATH = "/data/ynews.db"
 PUBLIC_URL = "https://ynews.top"
 TG_CHANNEL = "@ynews_top"
+TG_MAX_POSTS = "5"
