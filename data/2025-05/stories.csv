@@ -1638,6 +1638,7 @@ id,created_at,added_at,title,url,max_score,max_comments
 43927649,1746720824,1746723600,Show HN: Checking Pope's election results with smoke test script for chimney,https://github.com/donobu-inc/donobu-papal-election-tests/blob/main/tests/papal_election_smoke.test.ts,26,12
 43927681,1746721005,1746741600,OSUniverse: Building a Better OSWorld,,4,0
 43927708,1746721114,1746748800,System lets robots identify an object's properties through handling,https://news.mit.edu/2025/system-lets-robots-identify-objects-properties-through-handling-0508,3,0
+43927794,1746721571,1747062000,Optimizing My Hacker News Experience,https://reorientinglife.substack.com/p/optimizing-my-hacker-news-experience,78,37
 43927813,1746721644,1746720000,High tariffs become 'real' with our first $36K bill,http://adafruit.com/tariffbill,475,392
 43927842,1746721779,1746723600,Show HN: Hypermode Model Router Preview – OpenRouter Alternative,https://hypermode.com/blog/introducing-model-router,32,24
 43927856,1746721845,1746720000,New pope elected on second day of the conclave,https://www.cnn.com/world/live-news/new-pope-conclave-day-two-05-08-25,605,1040
@@ -1653,6 +1654,7 @@ id,created_at,added_at,title,url,max_score,max_comments
 43928265,1746723535,1746741600,Why developers and their bosses disagree over generative AI,https://leaddev.com/technical-direction/why-developers-and-their-bosses-disagree-over-generative-ai,4,1
 43928267,1746723539,1746723600,Uber's Shower Gate Scandal,https://www.teamblind.com/post/ubers-shower-gate-scandal-KpqjYBkP,68,18
 43928315,1746723730,1746723600,Reservoir Sampling,https://samwho.dev/reservoir-sampling/,529,105
+43928364,1746723911,1747015200,In-Memory Ferroelectric Differentiator,https://www.nature.com/articles/s41467-025-58359-4,33,1
 43928522,1746724535,1746748800,Humans still haven't seen 99.999% of the deep seafloor,https://www.npr.org/2025/05/07/nx-s1-5387502/deep-seafloor-ocean-mapped-rhode-island,6,0
 43928545,1746724586,1746723600,New Pope has been chosen,https://apnews.com/live/conclave-pope-catholic-church-updates-5-8-2025,10,6
 43928570,1746724652,1746727200,Linux drops support for 486 and early Pentium CPUs: 20 years after Microsoft,https://www.zdnet.com/article/linux-drops-support-for-486-and-early-pentium-processors-20-years-after-microsoft/,50,21
@@ -1759,7 +1761,9 @@ id,created_at,added_at,title,url,max_score,max_comments
 43932567,1746749061,1746759600,Cogentcore: Open-source framework for building multi-platform apps with Go,https://github.com/cogentcore/core,34,16
 43932602,1746749427,1746763200,"If Free Buses Aren't Wise, What About Cheaper Citi Bikes?",https://www.vitalcitynyc.org/articles/if-free-buses-arent-wise-what-about-cheaper-citi-bikes,16,9
 43932678,1746750220,1746748800,NSF faces shake-up as officials abolish its 37 divisions,https://www.science.org/content/article/exclusive-nsf-faces-radical-shake-officials-abolish-its-37-divisions,16,1
+43932686,1746750322,1747047600,A formatter for your kdl files,https://github.com/hougesen/kdlfmt,12,2
 43932690,1746750388,1746986400,Coupling furfural oxidation for H2 production using silicon photoelectrodes,https://www.nature.com/articles/s41467-025-58000-4,10,4
+43932764,1746751233,1747044000,Show HN: Vom Decision Platform (Cursor for Decision Analyst),https://www.vomdecision.com,15,16
 43932777,1746751449,1746756000,Pakistan's Chinese-made jet brought down two Indian fighter aircraft,https://www.reuters.com/world/pakistans-chinese-made-jet-brought-down-two-indian-fighter-aircraft-us-officials-2025-05-08/,9,3
 43932796,1746751719,1746756000,"""just"" is a four letter word",https://www.neverjust.net/,9,3
 43932871,1746752453,1746817200,How to (actually) prove it – New Frontiers of Mathematics and Computing in Lean,https://kirancodes.me/posts/log-how-to-prove-it-maths.html,81,17
@@ -1929,6 +1933,7 @@ id,created_at,added_at,title,url,max_score,max_comments
 43939804,1746815935,1746817200,Google Starts Scanning All Your Emails After Gmail Upgrade,https://www.forbes.com/sites/zakdoffman/2025/05/07/googles-gmail-upgrade-you-must-decide-if-this-goes-too-far/,4,0
 43939834,1746816153,1746817200,Bluetooth 6.1,https://www.bluetooth.com/blog/delivering-on-the-bi-annual-release-schedule-bluetooth-core-6-1-is-here/,8,0
 43939845,1746816208,1746817200,"37signals is completing its on-prem move, deleting its AWS account save millions",https://www.theregister.com/2025/05/09/37signals_cloud_repatriation_storage_savings/,9,0
+43939877,1746816483,1747090800,The Beam,https://www.erlang-solutions.com/blog/the-beam-erlangs-virtual-machine/,105,24
 43940033,1746817673,1746820800,Why 536 was 'the worst year to be alive',https://www.science.org/content/article/why-536-was-worst-year-be-alive,127,68
 43940096,1746818209,1746864000,"Infra Caddy Guy Scripts: Docker, Caddy Lightweight Server Management Bash TUI",https://github.com/nguyenanhung/infra-caddy-guy,5,1
 43940107,1746818271,1746864000,How I Created the Amazon Logo,https://www.bileshendry.com/how-i-created-the-amazon-logo-blog/,5,0
@@ -2042,14 +2047,17 @@ id,created_at,added_at,title,url,max_score,max_comments
 43943763,1746860757,1746860400,Airlines Are Collecting Your Data and Selling It to ICE,https://www.levernews.com/airlines-are-collecting-your-data-and-selling-it-to-ice/,8,0
 43943856,1746862002,1746864000,Tesla Worker Knew His Anti-Musk Website Was a Risk. He Did It Anyway,https://www.businessinsider.com/tesla-worker-anti-musk-website-fired-2025-5,10,0
 43943871,1746862228,1746867600,Why should I care? or why punks are correct and old wise philosophers are wrong,https://abuseofnotation.github.io/moral-law/,24,12
+43943889,1746862567,1747008000,A whippet waypoint / Nofl: A Precise Immix,https://wingolog.org/archives/2025/05/09/a-whippet-waypoint,13,0
 43943898,1746862775,1746932400,Show HN: Codigo – The Programming Language Repository,https://codigolangs.com,78,24
 43943928,1746863358,1746878400,EM-LLM: Human-Inspired Episodic Memory for Infinite Context LLMs,https://github.com/em-llm/EM-LLM-model,112,10
 43943931,1746863377,1746928800,Apple hits back at US judge's 'extraordinary' contempt order,https://www.bbc.com/news/articles/c3r8rg4w2v0o,7,0
 43943942,1746863490,1747004400,15 Years of Shader Minification,https://www.ctrl-alt-test.fr/2025/15-years-of-shader-minification/,146,25
 43943984,1746864090,1746867600,Ash (Almquist Shell) Variants,https://www.in-ulm.de/~mascheck/various/ash/,69,3
+43944007,1746864618,1747072800,5 Steps to N-Body Simulation,https://alvinng4.github.io/grav_sim/5_steps_to_n_body_simulation/,153,47
 43944016,1746864725,1746864000,"After 16 years, we're renewing the StackOverflow Brand",https://meta.stackexchange.com/questions/408823/after-16-years-we-re-renewing-the-brand,60,78
 43944154,1746866607,1746871200,CT scans don't lie–cigarettes are harder on the lungs than marijuana,https://healthimaging.com/topics/medical-imaging/computed-tomography-ct/ct-scans-dont-lie-cigarettes-are-harder-lungs-marijuana,28,74
 43944167,1746866759,1746867600,Cosmos 482 Descent Craft tracker,http://astria.tacc.utexas.edu/AstriaGraph/,35,7
+43944199,1746867167,1747011600,RPG in a Box,https://rpginabox.com/,315,77
 43944239,1746867677,1746867600,Rules-based world order in retreat and violence on the rise. Has WW3 begun?,https://www.theguardian.com/news/ng-interactive/2025/may/10/are-we-heading-for-another-world-war-or-has-it-already-started,18,4
 43944249,1746867827,1746878400,Bold linker v0.2.0 release – bold just got faster,https://github.com/kubkon/bold/releases/tag/v0.2.0,4,0
 43944266,1746868033,1746871200,"Chinese jacket maker is now the biggest company, according to Bloomberg",https://www.ft.com/content/bf5fd95f-115a-4770-820e-4ead24eb05ab,5,1
@@ -2059,34 +2067,45 @@ id,created_at,added_at,title,url,max_score,max_comments
 43944552,1746872672,1746932400,10k Drum Machines,https://10kdrummachines.com/,3,0
 43944621,1746873431,1746882000,How Unreal Engine 5 Is Killing Games [video],https://www.youtube.com/watch?v=wMoY0nW6Ouk,4,0
 43944636,1746873602,1746878400,Web .NET Prototype – Godot Engine,https://godotengine.org/article/live-from-godotcon-boston-web-dotnet-prototype/,5,1
+43944678,1746874298,1747011600,Origins of language: Wild chimps mirror linguistic structures in human language,https://phys.org/news/2025-05-language-wild-chimps-mirror-linguistic.html,4,0
 43944687,1746874511,1746874800,US Government considering suspending habeas corpus,https://www.bbc.com/news/articles/c0qgz18glljo,92,28
 43944743,1746875303,1746878400,AI-powered headphones offer group translation with voice cloning and 3D audio,https://techxplore.com/news/2025-05-ai-powered-headphones-group-voice.html,6,1
 43944747,1746875395,1746874800,Elizabeth Holmes' partner raises millions for new biotech testing startup,https://www.npr.org/2025/05/10/nx-s1-5393950/elizabeth-holmes-theranos-billy-evans-blood-testing,28,14
 43944789,1746875979,1746882000,Embracer Games Archive is preserving 75000 video games and needs contributions,https://embracergamesarchive.com/,184,89
 43944790,1746875979,1746878400,Intel: Winning and Losing,https://www.abortretry.fail/p/intel-winning-and-losing,108,105
 43944809,1746876276,1746878400,The Fallacy of Techno-Feudalism,https://petrapalusova.com/articles/tech-platforms-digital-economy-techno-feudalism,52,70
+43944854,1746876747,1747015200,Trezor's Multi-Layer Defense Against Supply Chain Attacks,https://blog.trezor.io/trezors-multi-layer-defense-against-supply-chain-attacks-54541f410389,3,0
 43944858,1746876786,1746874800,China Built More Clean Energy Than Coal–But Can't Use Half of It,https://oilprice.com/Alternative-Energy/Renewable-Energy/China-Built-More-Clean-Energy-Than-CoalBut-Cant-Use-Half-of-It.html,4,2
 43944894,1746877323,1746878400,"Sunlight: A certificate transparency implementation built for scalability, ease",https://letsencrypt.org/2024/03/14/introducing-sunlight/,13,2
+43944936,1746877857,1747015200,Introduction to Universal Scene Description (2021),https://openusd.org/release/intro.html,3,0
 43944951,1746877976,1746882000,The Monster in the Forest,https://www.solipsys.co.uk/images/TheMonsterInTheForest.jpg,5,3
 43944965,1746878185,1746878400,"Zero ships from China are bound for California's ports, not seen since pandemic",https://www.cnn.com/2025/05/10/business/zero-ships-china-trade-ports-pandemic,17,4
 43944974,1746878350,1746878400,LTXVideo 13B AI video generation,https://ltxv.video/,216,64
+43945002,1746878806,1747011600,Bold : A Drop-In Replacement For Apple System Linker Written In Zig,https://github.com/kubkon/bold,4,0
 43945015,1746879003,1746882000,Warren Buffett versus American Capitalism,https://www.bloomberg.com/opinion/articles/2025-05-09/warren-buffett-versus-american-capitalism,7,0
 43945041,1746879365,1746878400,Radxa Orion O6 brings Arm to the midrange PC (with caveats),https://www.jeffgeerling.com/blog/2025/radxa-orion-o6-brings-arm-midrange-pc,91,66
 43945116,1746880330,1746882000,Huawei's Kirin X90 may be the company's 'Apple Silicon' moment,https://www.tomshardware.com/pc-components/cpus/huaweis-kirin-x90-may-be-the-companys-apple-silicon-moment-matebook-pro-2025-features-in-house-hardware-and-software,22,0
 43945138,1746880479,1746882000,Industry groups are not happy about the imminent demise of Energy Star,https://insideclimatenews.org/news/08052025/energy-star-program-could-be-eliminated-by-trump-administration/,76,101
+43945157,1746880743,1747018800,3D printing in vivo for non-surgical implants and drug delivery,https://www.science.org/doi/10.1126/science.adt0293,36,8
 43945162,1746880785,1746882000,The Cult of Doing Business,https://www.commonwealmagazine.org/calvert-work-entrepreneur-ethic-baker-review-job,151,125
 43945165,1746880809,1746882000,Henry James's family tried to keep him in the closet (2016),https://www.theguardian.com/books/2016/feb/20/colm-toibin-how-henry-james-family-tried-to-keep-him-in-the-closet,9,12
 43945293,1746882175,1746882000,React Three Ecosystem,https://www.react-three.org/,124,55
 43945324,1746882444,1746885600,The Dave and Busters Anomaly,https://www.searchengine.show/the-dave-and-busters-anomaly/,4,0
 43945342,1746882591,1746900000,"US govt's science foundation purges 37 divisions, equity unit among casualties",https://www.theregister.com/2025/05/09/nsf_axes_37_division/,7,0
 43945373,1746882901,1746882000,I Want to Love Linux. It Doesn't Love Me Back,https://fireborn.mataroa.blog/blog/i-want-to-love-linux-it-doesnt-love-me-back-post-1-built-for-control-but-not-for-people/,67,46
+43945423,1746883415,1747015200,Garbage Collection of Object Storage at Scale,https://www.warpstream.com/blog/taking-out-the-trash-garbage-collection-of-object-storage-at-massive-scale,95,10
 43945426,1746883431,1746882000,"There's a National Egg Crisis, and One Company Is Making a Lot of Money",https://www.wsj.com/business/egg-prices-shortage-cal-maine-foods-f53286b3,32,22
 43945467,1746883745,1746892800,People Who Hype Cursor Usually Lack Technical Skills,https://en.smallyu.net/2025/04/12/People%20Who%20Hype%20Cursor%20Usually%20Lack%20Technical%20Skills/,63,44
+43945477,1746883920,1747015200,"Ash Framework – Model your domain, derive the rest",https://ash-hq.org/,275,119
+43945545,1746884434,1747076400,Interagency Grizzly Bear Committee,https://igbconline.org/,21,16
 43945553,1746884477,1746885600,Klarna plans to hire humans again,https://fortune.com/2025/05/09/klarna-ai-humans-return-on-investment/,6,1
 43945610,1746884994,1746885600,Gimp to Discuss Changing Name,https://floss.social/@GIMP/114481178111577485,15,32
 43945628,1746885113,1746896400,Failed Soviet Venus lander Kosmos 482 crashes to Earth after 53 years in orbit,https://www.space.com/space-exploration/launches-spacecraft/failed-soviet-venus-lander-kosmos-482-crashes-to-earth-after-53-years-in-orbit,186,132
 43945652,1746885294,1746885600,Tech oligarchs are gambling our future on a fantasy,https://www.theguardian.com/commentisfree/2025/may/03/tech-oligarchs-musk,10,0
+43945660,1746885343,1747015200,Why GADTs matter for performance (2015),https://blog.janestreet.com/why-gadts-matter-for-performance/,83,26
 43945728,1746885817,1746885600,mRNA vaccine makers are scrambling to navigate an 'existential threat',https://www.nature.com/articles/d41586-025-01462-9,9,2
+43945733,1746885914,1747015200,Interferometer Device Sees Text from a Mile Away,https://physics.aps.org/articles/v18/99,262,61
+43945734,1746885924,1747015200,The Battle to Bottle Palm Wine,https://www.atlasobscura.com/articles/palm-wine-in-united-states,17,19
 43945764,1746886130,1746892800,Petrichor,https://en.wikipedia.org/wiki/Petrichor,16,6
 43945797,1746886434,1746885600,"Bcachefs, Btrfs, EXT4, F2FS and XFS File-System Performance on Linux 6.15",https://www.phoronix.com/review/linux-615-filesystems,7,0
 43945818,1746886545,1746900000,Pope Leo XIV's PhD Dissertation,https://kathleenmccook.substack.com/p/pope-leo-xiv-dissertation,12,3
@@ -2166,6 +2185,7 @@ id,created_at,added_at,title,url,max_score,max_comments
 43949630,1746917077,1746928800,FTC delays enforcement of click-to-cancel rule until July 14,https://techcrunch.com/2025/05/10/ftc-delays-enforcement-of-click-to-cancel-rule/,11,0
 43949639,1746917189,1746918000,White House Orders Federal Agencies to Stop Considering 'Social Cost of Carbon',https://www.nytimes.com/2025/05/10/climate/social-cost-carbon-trump.html,14,1
 43949655,1746917389,1746921600,Concrete spheres for energy storage; California plans a 9-meter diameter sphere,https://farmingdale-observer.com/2025/05/10/a-german-experiment-proved-that-simple-concrete-spheres-make-fantastic-batteries-now-california-plans-to-submerge-a-9-meter-diameter-sphere-in-the-ocean-and-is-already-planning-versions-of-30-meters/,30,39
+43949691,1746917799,1747076400,The Women Who Made Polaroid Click,https://www.pbs.org/wgbh/americanexperience/features/women-who-made-polaroid-click/,3,0
 43949751,1746918484,1746921600,A Kansas City Neighborhood Is a Sea of Vacant Lots. Locals Blame One Company,https://www.wsj.com/real-estate/kansas-city-life-insurance-valentine-neighborhood-f250ebcd,4,1
 43949855,1746919458,1746925200,The History and Legacy of Visual Basic,https://retool.com/visual-basic,139,129
 43949923,1746920174,1746928800,'Scopes just went black again' as Newark air traffic hit by new outage,https://www.reuters.com/world/us/faa-hit-by-new-90-second-communications-outage-newark-air-traffic-2025-05-09/,5,0
@@ -2174,6 +2194,7 @@ id,created_at,added_at,title,url,max_score,max_comments
 43950029,1746921167,1746928800,The Substance: Pre-Release Piracy Made People More Eager to Visit the Cinema,https://torrentfreak.com/the-substance-pre-release-piracy-made-people-more-eager-to-visit-the-cinema-250510/,9,0
 43950046,1746921614,1746925200,Fandom Sells Giant Bomb to Independent Creators,https://about.fandom.com/news/fandom-sells-giant-bomb-to-independent-creators,214,134
 43950053,1746921672,1746921600,Why I didn't attend PyCon Australia 2024,https://www.lesinskis.com/pyconau-2024.html,3,0
+43950090,1746922210,1747076400,"Craigslist revenue drops to 300M, one-third of 2018 total",https://www.jobboardhive.com/2025/04/03/craigslist-revenue-traffic-drops-again-one-third-of-2018-total/,3,1
 43950111,1746922363,1746921600,Zero ships from China are bound for California's top ports,https://www.cnn.com/2025/05/10/business/zero-ships-china-trade-ports-pandemic,15,0
 43950234,1746923848,1746968400,Where does the ginseng in your tea come from? Graphic memoir explains the trade,https://www.npr.org/2025/05/09/nx-s1-5137011/ginseng-roots-craig-thompson-blankets,5,0
 43950280,1746924511,1746968400,This is Water by David Foster Wallace,https://fs.blog/david-foster-wallace-this-is-water/,11,0
@@ -2187,14 +2208,18 @@ id,created_at,added_at,title,url,max_score,max_comments
 43950709,1746929629,1746939600,NetBSD 10.x Kernel Math_emulation,https://mezzantrop.wordpress.com/2025/02/04/netbsd-10-x-kernel-math_emulation/,57,11
 43950770,1746930348,1746932400,"The AI jobs crisis is here, now",https://www.bloodinthemachine.com/p/the-ai-jobs-crisis-is-here-now,33,17
 43950834,1746931007,1746939600,The AUCTUS A6: the chip enabling inexpensive DMR Radio (2021),https://jhart99.com/auctus-a6/,8,4
+43950874,1746931408,1747054800,Fixing Telnet Fixes (2019),https://flak.tedunangst.com/post/fixing-telnet-fixes,5,0
 43950954,1746932288,1746961200,Anylinuxfs – macOS mount any Linux filesystem read/write using NFS and a microVM,https://github.com/nohajc/anylinuxfs,6,2
 43950976,1746932516,1746932400,Ian Lance Taylor of the Go Team Leaves Google,https://www.airs.com/blog/archives/670,562,378
 43951188,1746935177,1746936000,Self-hosted app showed me I've been using bookmarks wrong all my life,https://www.xda-developers.com/this-self-hosted-app-showed-me-been-using-bookmarks-wrong-all-life/,10,5
 43951218,1746935634,1746936000,Tufts graduate student Rümeysa Öztürk released from immigration detention,https://www.npr.org/2025/05/09/nx-s1-5393055/tufts-student-rumeysa-ozturk-ordered-freed-from-immigration-detention,55,5
+43951366,1746937561,1747076400,"Getting Started with Celtic Coins – Crude and Barbarous, or Just Different?",https://collectingancientcoins.co.uk/getting-started-with-celtic-coins-crude-and-barbarous-or-just-different/,69,24
 43951368,1746937593,1746936000,Fan Service,https://flak.tedunangst.com/post/fan-service,152,32
 43951547,1746939682,1746939600,More People Use Illicit Fentanyl in the U.S. Than Previously Thought,https://www.discovermagazine.com/health/turns-out-more-people-use-illicit-fentanyl-in-the-u-s-than-previously,6,1
+43951548,1746939706,1747076400,Show HN: Slice-tree – A piece table data structure implemented using RB tree,https://github.com/eu-ge-ne/slice-tree,3,0
 43951588,1746940278,1746946800,One-Click RCE in Asus's Preinstalled Driver Software,https://mrbruh.com/asusdriverhub/,520,241
 43951604,1746940634,1746972000,Mipmap selection in too much detail,https://pema.dev/2025/05/09/mipmaps-too-much-detail/,98,25
+43951608,1746940696,1747076400,ZB-1 Radio Homing Adapter and Security Cover,https://timeandnavigation.si.edu/multimedia-asset/zb-1-radio-homing-adapter-and-security-cover,4,0
 43951682,1746941907,1746975600,Border agents are going to photograph everyone leaving the US by car,https://www.theverge.com/policy/664433/cbp-photos-facial-recognition-travelers-leaving-us,7,0
 43951737,1746943081,1746954000,Thinkers and Doers,https://www.strangeloopcanon.com/p/on-thinkers-and-doers,55,42
 43951781,1746943868,1746946800,The Accursed Share,https://en.wikipedia.org/wiki/The_Accursed_Share,10,1
@@ -2205,6 +2230,7 @@ id,created_at,added_at,title,url,max_score,max_comments
 43951977,1746947169,1746964800,The Emacs Widget Toolkit,https://appetrosyan.github.io/posts/emacs-widget.html,48,12
 43951985,1746947246,1746954000,Absolute Zero: Reinforced Self-Play Reasoning with Zero Data,https://arxiv.org/abs/2505.03335,88,19
 43952035,1746948023,1746961200,Hexagon wheel robots transform tight warehouse spaces into smart sorting zones,https://interestingengineering.com/innovation/hexagon-wheel-robots-warehouses-packages,3,0
+43952042,1746948132,1747087200,Cory Arcangel Recovered a Late Artist's Digital Legacy,https://www.newyorker.com/culture/infinite-scroll/how-cory-arcangel-recovered-a-late-artists-digital-legacy,7,1
 43952057,1746948314,1746961200,A new Lazarus arises – for the fourth time – for Pascal programming fans,https://www.theregister.com/2025/05/09/new_lazarus_4/,4,0
 43952157,1746949869,1746968400,Alone Together: Disconnection Is Our Generation's Black Death,https://josef.cn/blog/black-death,17,8
 43952239,1746951038,1746964800,Build iOS Apps on Linux and Windows (WSL),https://forums.swift.org/t/xtool-cross-platform-xcode-replacement-build-ios-apps-on-linux-and-more/79803,269,54
@@ -2230,24 +2256,34 @@ id,created_at,added_at,title,url,max_score,max_comments
 43953249,1746965544,1746979200,AI-generated code could be a disaster for the software supply chain,https://arstechnica.com/security/2025/04/ai-generated-code-could-be-a-disaster-for-the-software-supply-chain-heres-why/,7,0
 43953272,1746965838,1746975600,What the hell are rare earth elements?,https://media.hubspot.com/what-the-hell-are-rare-earth-elements,46,7
 43953302,1746966093,1746964800,"Klarna flip from AI-first to hiring people again, Survey Reveal AI projects fail",https://fortune.com/2025/05/09/klarna-ai-humans-return-on-investment/,27,10
+43953344,1746966668,1747054800,The Transaction Concept: Virtues and Limitations (1981) [pdf],https://jimgray.azurewebsites.net/papers/thetransactionconcept.pdf,3,0
 43953517,1746968448,1746975600,OpenAI negotiates with Microsoft to unlock new funding and future IPO,https://www.ft.com/content/8d9e5149-7e4f-4886-a035-9d200204972a,13,1
+43953597,1746969133,1747076400,A MAZE. / Berlin – 14th international games and playful media festival,https://2025.amaze-berlin.de/,3,1
+43953626,1746969432,1747033200,Show HN: Printstack – I'll print and post your Substacks to you,https://printstack.net/for-readers,12,1
+43953714,1746970356,1747029600,The British Airways position on various border disputes,https://drewdevault.com/2025/05/05/2025-05-05-BA-on-border-disputes.html,6,5
 43953722,1746970434,1746968400,Show HN: GlassFlow – OSS streaming dedup and joins from Kafka to ClickHouse,https://github.com/glassflow/clickhouse-etl,78,32
 43953723,1746970442,1746972000,Backdoor found in popular ecommerce components,https://sansec.io/research/license-backdoor,44,6
+43953754,1746970713,1747076400,We Trade with Ants: The Little Speakers,https://www.fortressofdoors.com/wetradewithants-thelittlespeakers/,3,0
 43953883,1746972123,1746972000,Title of work deciphered in sealed Herculaneum scroll via digital unwrapping,https://www.finebooksmagazine.com/fine-books-news/title-work-deciphered-sealed-herculaneum-scroll-digital-unwrapping,237,117
 43953884,1746972132,1746972000,"In 2025, venture capital can't pretend everything is fine any more",https://pivot-to-ai.com/2025/05/03/in-2025-venture-capital-cant-pretend-everything-is-fine-any-more/,273,253
 43953885,1746972133,1746972000,US President Donald Trump Seeks to Cancel NASA's Mars Sample Return,https://www.scientificamerican.com/article/trump-budget-calls-for-stranding-nasas-mars-samples-on-the-red-planet/,30,6
 43953992,1746973091,1746982800,"Olivia Farnsworth. The ""Bionic Teen"" Who Feels No Pain",https://medium.com/@Sibouze/meet-olivia-farnsworth-689caade73b5,4,2
+43954027,1746973369,1747076400,"The IoT device ""I'm in a meeting.""",https://nullonerror.org/2025/05/11/i-have-built-an-iot-device-to-let-my-family-know-when-i-am-in-a-meeting/,121,77
 43954054,1746973609,1746986400,Booting the RP2350 from UART,https://pfister.dev/blog/2025/rp2350-uart-bl.html,88,21
 43954178,1746974589,1746979200,JEP 515: Ahead-of-Time Method Profiling,https://openjdk.org/jeps/515,101,10
+43954211,1746974907,1747054800,Incus: System container and virtual machine manager,https://github.com/lxc/incus,3,0
 43954225,1746975055,1746982800,"2025 will likely be another brutal year of failed startups, data suggests",https://techcrunch.com/2025/01/26/2025-will-likely-be-another-brutal-year-of-failed-startups-data-suggests/,11,0
 43954249,1746975296,1746975600,Gonzalo Guerrero,https://en.wikipedia.org/wiki/Gonzalo_Guerrero,98,27
 43954459,1746977207,1746975600,"DNS Piracy Blocking Orders: Google, Cloudflare, and OpenDNS Respond Differently",https://torrentfreak.com/dns-piracy-blocking-orders-google-cloudflare-and-opendns-respond-differently-250511/,181,160
 43954470,1746977338,1746979200,Immunogenicity and Safety of Influenza and Covid-19 Multicomponent Vaccine,https://jamanetwork.com/journals/jama/article-abstract/2833668,9,1
 43954488,1746977499,1746975600,High-School Shop Students Attract Skilled-Trades Job Offers,https://www.wsj.com/lifestyle/careers/skilled-trades-high-school-recruitment-fd9f8257,256,492
+43954584,1746978523,1747076400,The Compound Interest of Small Ideas,https://www.chrbutler.com/the-compound-interest-of-small-ideas,5,0
 43954649,1746979059,1746986400,"I built a native Windows Todo app in pure C (278 KB, no frameworks)",https://github.com/Efeckc17/simple-todo-c,386,235
 43954810,1746980525,1746982800,An $18M grant would have drastically reduced food waste. Then the EPA cut it,https://grist.org/food-and-agriculture/trump-epa-community-change-grants-program-food-waste/,75,43
+43954858,1746980899,1747076400,"A Rust API Inspired by Python, Powered by Serde",https://ohadravid.github.io/posts/2025-05-serde-reflect/,57,26
 43954896,1746981118,1746982800,Plain Vanilla Web – Guide for de-frameworking yourself,https://plainvanillaweb.com/index.html,1505,678
 43955003,1746981985,1746986400,37signals is completing its on-prem move,https://www.theregister.com/2025/05/09/37signals_cloud_repatriation_storage_savings/,57,8
+43955024,1746982150,1747076400,Doom on the Oldest Digital Computer in America [video],https://www.youtube.com/watch?v=no0CkQk7id0,50,12
 43955025,1746982153,1746990000,US Copyright Office: Generative AI Training [pdf],https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf,60,19
 43955030,1746982179,1746982800,Moderna's Super-Vaccine for Flu and Covid Works–Now Politics Could Sink It,https://gizmodo.com/modernas-super-vaccine-for-flu-and-covid-works-now-politics-could-sink-it-2000599293,22,4
 43955117,1746982873,1746982800,Elizabeth Holmes's lover raises millions for blood-testing startup,https://www.theguardian.com/us-news/2025/may/11/elizabeth-holmes-partner-blood-testing-startup,49,70
@@ -2264,24 +2300,191 @@ id,created_at,added_at,title,url,max_score,max_comments
 43955754,1746987515,1746990000,Philips debuts 3D printable components to repair products,https://www.tomshardware.com/3d-printing/philips-debuts-3d-printable-components-to-repair-products,52,6
 43955757,1746987560,1746990000,Rust Devs Think We're Hopeless; Let's Prove Them Wrong (With C++ Memory Leaks),https://www.babaei.net/blog/rust-devs-think-we-are-hopeless-lets-prove-them-wrong-with-cpp-memory-leaks/,23,25
 43955788,1746987839,1747000800,Apple's Widget Backdoor [video],https://www.youtube.com/watch?v=NdJ_y1c_j_I,17,1
+43955834,1746988126,1747076400,"TwoFold (2f), CLI text expander/template engine",https://github.com/ShinyTrinkets/twofold.ts,17,2
 43955842,1746988158,1746990000,Scraperr – A Self Hosted Webscraper,https://github.com/jaypyles/Scraperr,261,92
+43955851,1746988204,1747015200,EventQL: A Query Language for Events,https://docs.eventsourcingdb.io/reference/eventql/,11,2
 43955865,1746988308,1746990000,'World's first' AMD GPU driven via USB3,https://www.tomshardware.com/pc-components/gpus/tiny-corp-heralds-worlds-first-amd-gpu-driven-via-usb3-egpus-tested-on-apple-silicon-with-linux-and-windows-also-supported,15,1
+43955868,1746988312,1747076400,Biological Organisation as Closure of Constraints,https://www.sciencedirect.com/science/article/abs/pii/S0022519315001009,5,0
+43955913,1746988551,1747076400,Better Air Purifiers,https://www.jefftk.com/p/better-air-purifiers,7,0
 43955977,1746988968,1746990000,Internal Documents Show Why We Shouldn't Trust Porn Companies,https://www.nytimes.com/2025/05/10/opinion/pornhub-children-documents.html,15,2
+43956058,1746989593,1747033200,Show HN: Reactylon – A new way to build XR with React and Babylon.js,https://github.com/simonedevit/reactylon,6,0
 43956095,1746989827,1746990000,Why not object capability languages?,https://blog.plan99.net/why-not-capability-languages-a8e6cbdf9682,78,67
 43956107,1746989933,1746990000,Pope Leo XIV says advancement of AI played a factor in his papal name selection,https://www.nbcnews.com/world/the-vatican/pope-leo-ai-played-factor-papal-name-rcna206126,13,5
 43956115,1746989987,1746990000,2024 sea level 'report cards' map futures of U.S. coastal communities,https://news.wm.edu/2025/05/06/2024-sea-level-report-cards-map-futures-of-u-s-coastal-communities/,103,100
 43956311,1746991367,1746997200,"Traffic noise reduces the stress benefits of listening to nature, study finds",https://www.uwe.ac.uk/news/urban-noise-pollution,10,1
+43956405,1746991970,1747015200,"Rerum Novarum (""The thirst for innovation"") (1891)",https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_15051891_rerum-novarum.html,15,5
+43956469,1746992431,1747054800,OpenSSH Config Tags How To,https://mrod.space/2023/09/04/using-tags-in-ssh-config,4,0
 43956543,1746992935,1746993600,"Removing ""Annoying"" Windows 10 Features Is DMCA Violation, Microsoft Says(2020)",,14,4
 43956547,1746992949,1747004400,"ToyDB rewritten: a distributed SQL database in Rust, for education",https://github.com/erikgrinaker/toydb,146,14
 43956630,1746993468,1746997200,The Paradoxes of Feminine Muscle,https://www.newyorker.com/culture/critics-notebook/the-paradoxes-of-feminine-muscle,10,7
 43956701,1746993928,1746993600,The Myth of the Genius Hacker,https://www.ft.com/content/55221f2d-00b3-4856-9158-dfdd0263bd0c,22,6
 43956723,1746994144,1746993600,"Burrito Now, Pay Later",https://enterprisevalue.substack.com/p/burrito-now-pay-later,168,350
 43956823,1746994835,1747000800,Why Laptop Batteries Can't Get Any Bigger (For Now),https://www.ifixit.com/News/109072/why-laptop-batteries-cant-get-any-bigger-for-now,10,2
+43956968,1746996122,1747054800,Beating the fastest lexer generator in Rust,https://alic.dev/blog/fast-lexing,3,0
 43956973,1746996142,1746997200,VIC-20,https://en.wikipedia.org/wiki/VIC-20,12,2
 43957010,1746996440,1746997200,Why Bell Labs Worked,https://1517.substack.com/p/why-bell-labs-worked,334,233
+43957072,1746996803,1747072800,The overlooked masterpiece full of coded messages about World War One,https://www.bbc.com/culture/article/20250423-the-masterpiece-full-of-coded-messages-about-ww1,24,7
 43957231,1746998156,1746997200,The surgeon who used F1 pitstop techniques to save lives of babies,https://www.thetimes.com/sport/formula-one/article/professor-martin-elliott-interview-surgeon-f1-pitstops-babies-ferrari-j3sbkjssk,62,12
 43957425,1746999901,1747000800,What's the Cost to Society of Pollution? Trump Says Zero,https://www.nytimes.com/2025/05/10/climate/social-cost-carbon-trump.html,9,0
 43957481,1747000480,1747000800,Satellite will have to be turned off when it floats over the US,https://www.thecooldown.com/green-tech/biomass-satellite-carbon-capture-forests/,19,15
 43957494,1747000591,1747000800,This Los Angeles port is among the first casualties of Trump's trade war,https://www.washingtonpost.com/business/2025/05/11/los-angeles-port-tariffs-trade-tensions/,12,4
+43957532,1747000880,1747008000,Elizabeth Holmes's Partner Has a New Blood-Testing Startup,https://www.nytimes.com/2025/05/10/business/elizabeth-holmes-partner-blood-testing-startup.html,10,2
 43957816,1747003080,1747004400,"Scientists Crack 70-Year Fusion Puzzle, Paving Way for Clean Energy",https://scitechdaily.com/scientists-crack-70-year-fusion-puzzle-paving-way-for-clean-energy/,10,2
+43957968,1747004312,1747062000,Ask HN: Gemini Reliability Degrading?,,7,2
 43957989,1747004454,1747004400,Trump to accept luxury jet from Qatar to use as Air Force One – media report,https://www.rnz.co.nz/news/world/560683/trump-to-accept-luxury-jet-from-qatar-to-use-as-air-force-one-media-report,25,10
+43958060,1747005004,1747018800,Adam Smith on Mercantilism,https://marginalrevolution.com/marginalrevolution/2025/05/adam-smith-on-mercantilism.html,7,0
+43958082,1747005162,1747008000,I hacked my clock to control my focus,https://www.paepper.com/blog/posts/how-i-hacked-my-clock-to-control-my-focus.md/,125,68
+43958190,1747006452,1747072800,isc.ro,https://isc.ro/,55,24
+43958317,1747007900,1747008000,Microsoft moved the goalposts once. Will Windows 12 bring another shift?,https://www.theregister.com/2025/05/07/microsoft_hardware_gates/,6,2
+43958378,1747008525,1747008000,Musk's Grok AI was specifically instructed not to say he spread misinformation,https://www.the-independent.com/tech/elon-musk-xai-grok-misinformation-b2703388.html,8,0
+43958382,1747008588,1747008000,Avoiding AI is hard – but our freedom to opt out must be protected,https://theconversation.com/avoiding-ai-is-hard-but-our-freedom-to-opt-out-must-be-protected-255873,248,140
+43958460,1747009360,1747008000,The Financial Times: the West's shameful silence on Gaza,https://www.ft.com/content/f5fd6f8d-06a7-4d1f-b842-752e3aca9272,6,1
+43958562,1747010362,1747090800,Air Traffic Control,https://computer.rip/2025-05-11-air-traffic-control.html,264,116
+43958688,1747011695,1747011600,Trump to accept luxury jet from Qatar to use as Air Force One,https://www.cnn.com/2025/05/11/politics/trump-luxury-jet-qatar-air-force-one,12,0
+43958716,1747011899,1747011600,"Custom SIM card in Tesla Model 3 2024, Tesla Model Y 2025 and Cybertruck",https://olegkutkov.me/2025/05/12/custom-sim-card-in-tesla-model-3-2024-tesla-model-y-2025-and-cybertruck/,50,23
+43958751,1747012544,1747029600,Dance Music Is Booming Again. What's Different This Time? A Lot,https://www.nytimes.com/2025/05/11/arts/music/dance-music-boom-nightlife.html,5,0
+43958798,1747013227,1747015200,"Tesla employees ask Elon Musk to resign, confirm demand problem",https://electrek.co/2025/05/11/tesla-employees-ask-elon-musk-resign-confirm-massive-demand-problem-get-fired/,41,17
+43958846,1747013762,1747054800,Python lib generates its code on-the-fly based on usage,https://github.com/cofob/autogenlib,246,89
+43958898,1747014417,1747015200,Intellect-2 Release: The First 32B Model Trained Through Globally Distributed RL,https://www.primeintellect.ai/blog/intellect-2-release,200,65
+43958911,1747014560,1747022400,DIY solar launches in US – no installers or permits needed,https://www.zdnet.com/home-and-office/energy/ecoflows-new-backyard-solar-energy-system-starts-at-599-no-installation-crews-or-permits-needed/,6,9
+43958968,1747015237,1747054800,Bios Boot to D,https://theartofmachinery.com/2017/01/24/boot_to_d.html,11,2
+43959000,1747015527,1747062000,Show HN: I Built Remind Me AI. It's Like Unlimited GPT Tasks. Try the Demo,https://app.arcade.software/share/PrR3lG51cRjJkk6vEz3R,5,0
+43959048,1747016217,1747018800,US Copyright Office Has Thoughts on AI. Big Tech May Not Like It,https://www.businessinsider.com/ai-training-copyright-laws-big-tech-fair-use-openai-meta-2025-5,43,12
+43959071,1747016471,1747018800,Continuous Thought Machines,https://pub.sakana.ai/ctm/,315,36
+43959075,1747016514,1747036800,Migrating to Codeberg,https://guix.gnu.org/blog/2025/migrating-to-codeberg/,47,2
+43959129,1747017272,1747022400,The Academic Pipeline Stall: Why Industry Must Stand for Academia,https://www.sigarch.org/the-academic-pipeline-stall-why-industry-must-stand-for-academia/,144,142
+43959228,1747018623,1747018800,Trump fires head of Copyright Office after rpt AI training may not be fair use,https://www.theverge.com/news/664768/trump-fires-us-copyright-office-head,17,2
+43959403,1747020866,1747022400,I ruined my vacation by reverse engineering WSC,https://blog.es3n1n.eu/posts/how-i-ruined-my-vacation/,356,189
+43959461,1747021641,1747022400,BM Boys: the Nigerian sextortion network hiding in plain sight on TikTok,https://www.theguardian.com/us-news/2025/may/11/sextortion-nigeria-bm-boys-tiktok,36,2
+43959522,1747022276,1747026000,Zero ships from China are bound for California's top ports,https://www.cnn.com/2025/05/10/business/zero-ships-china-trade-ports-pandemic,7,0
+43959525,1747022320,1747033200,Coffee shops ditch WiFi and laptops to limit remote work,https://www.axios.com/2025/05/09/coffee-shops-no-wifi-laptops-remote-work,9,4
+43959656,1747024107,1747054800,In defense of self-signed certificates (2013),https://michael.orlitzky.com/articles/in_defense_of_self-signed_certificates.xhtml,9,1
+43959710,1747024910,1747026000,Ask HN: Cursor or Windsurf?,,312,395
+43959840,1747026841,1747029600,Trump To Sign EO Aimed at Lowering Drug Prices,https://www.wsj.com/politics/policy/trump-says-he-will-sign-executive-order-aimed-at-lowering-drug-prices-2a5b9b28,6,3
+43959878,1747027393,1747047600,Terence Tao: Formalizing a proof in Lean using GitHub Copilot and canonical,https://www.youtube.com/watch?v=cyyR7j2ChCI,5,0
+43959887,1747027536,1747054800,Replacing tmux and GNU screen with Emacs,https://www.masteringemacs.org/article/replacing-tmux-gnu-screen-emacs,20,6
+43959932,1747028141,1747054800,"Show HN: Blog comments, nice looking, open source – Talkyard",https://blog-comments.talkyard.io/demo/,23,3
+43960015,1747029136,1747054800,"Stop Saying ""Responsible Disclosure""",https://www.da.vidbuchanan.co.uk/blog/responsible-disclosure.html,6,1
+43960186,1747031300,1747040400,US AI execs urge improved infrastructure and chip exports to beat China,https://www.reuters.com/world/us/us-ai-execs-give-congress-policy-wishlist-beating-china-2025-05-08/,6,0
+43960220,1747031931,1747054800,Discovery by Norfolk metal detectorist baffles experts,https://www.edp24.co.uk/news/25145529.discovery-norfolk-metal-detectorist-baffles-experts/,5,1
+43960404,1747034308,1747076400,Show HN: Vibemail – Chrome extension for vibe emailing,https://chromewebstore.google.com/detail/vibemail/dijcjhhnpgoenmkmahigmdgpkajhhhbg,9,7
+43960421,1747034482,1747040400,Andreas Kling's Keynote Presentation on the Ladybird Browser [video],https://www.youtube.com/watch?v=9YM7pDMLvr4,26,0
+43960448,1747034841,1747040400,Joint Statement on China-U.S. Economic and Trade Meeting in Geneva,https://www.mofcom.gov.cn/syxwfb/art/2025/art_3bcf393df58d4483804c0c3d692a5744.html,4,2
+43960460,1747034975,1747051200,US and China agree to drastically roll back tariffs,https://www.cnn.com/2025/05/12/business/us-china-trade-deal-announcement-intl-hnk,11,6
+43960470,1747035081,1747054800,Creating a static website for all my bookmarks,https://alexwlchan.net/2025/bookmarks-static-site/,47,6
+43960491,1747035326,1747069200,HTML Time Tags and DRY (HARC Stack),https://rakujourney.wordpress.com/2025/05/12/harc-stack-semantic-time/,5,0
+43960518,1747035699,1747036800,White House fires head of Copyright Office amid Library of Congress shakeup,https://www.washingtonpost.com/politics/2025/05/11/white-house-copyright-office-director-fired/,101,66
+43960577,1747036302,1747040400,"Armbian Updates: OMV support, boot improvents, Rockchip optimizations",https://www.armbian.com/newsflash/armbian-updates-nas-support-lands-boot-systems-improve-and-rockchip-optimizations-arrive/,74,19
+43960681,1747037651,1747040400,US-China Tariff Cuts,https://www.wsj.com/livecoverage/stock-market-today-tariffs-trade-war-05-12-2025,8,0
+43960793,1747038611,1747054800,Show HN: MMORPG prototype inspired by World of Warcraft,https://github.com/nickyvanurk/everwilds,28,9
+43960813,1747038766,1747044000,Stop Solving Problems by Adding Processes,https://medium.com/@acmerfight/stop-solving-problems-by-adding-processes-17de3e07d84e,5,1
+43960861,1747039195,1747040400,US and China Slash Tariffs,https://www.theverge.com/news/664811/us-china-pause-tariffs-90-days,9,1
+43961054,1747041120,1747040400,America's Coming Brain Drain: Trump's War on Universities Could Kill Innovation,https://www.foreignaffairs.com/united-states/trump-universities-war-america-coming-brain-drain,23,4
+43961150,1747042345,1747062000,Did You Shoot Somebody in Self-Defense? There's an Insurance Policy for That,https://www.wsj.com/us-news/law/self-defense-insurance-policy-379336cb,8,3
+43961196,1747042883,1747051200,Curl's CI job for spotting domain squatting,https://mastodon.social/@bagder/114493950931893559,7,2
+43961226,1747043196,1747044000,"Universe expected to decay in 10⁷⁸ years, much sooner than previously thought",https://phys.org/news/2025-05-universe-decay-years-sooner-previously.html,224,309
+43961247,1747043350,1747047600,US Copyright Office found AI companies breach copyright. Its boss was fired,https://www.theregister.com/2025/05/12/us_copyright_office_ai_copyright/,446,388
+43961309,1747044047,1747044000,Why alien languages could be far stranger than we imagine Essays,https://aeon.co/essays/why-alien-languages-could-be-far-stranger-than-we-imagine,23,34
+43961327,1747044185,1747051200,'Inverse vaccines': promise of a 'holy grail' treatment for autoimmune diseases,https://www.theguardian.com/wellness/2025/may/12/autoimmune-disease-inverse-vaccines,4,0
+43961329,1747044197,1747069200,Ask HN: Did GitHub UI become unbearably slow?,,10,8
+43961478,1747045702,1747058400,Säkkijärven Polkka,https://en.wikipedia.org/wiki/S%C3%A4kkij%C3%A4rven_polkka,4,0
+43961573,1747046619,1747047600,Microbe that infests hospitals can digest medical-grade plastic ― a first,https://www.nature.com/articles/d41586-025-01412-5,25,12
+43961597,1747046800,1747051200,Implicit UVs: Real-time semi-global parameterization of implicit surfaces [pdf],https://baptiste-genest.github.io/papers/implicit_uvs.pdf,50,11
+43961720,1747048082,1747047600,"Unending ransomware attacks are a symptom, not the sickness",https://www.theregister.com/2025/05/12/opinion_column_ransomware/,12,0
+43961832,1747049355,1747051200,U.S. and China agree to slash tariffs for 90 days in major trade breakthrough,https://www.cnbc.com/2025/05/12/us-and-china-agree-to-slash-tariffs-for-90-days.html,21,24
+43961908,1747050024,1747051200,A community-led fork of Organic Maps,https://www.comaps.app/news/2025-05-12/3/,331,206
+43962037,1747051313,1747054800,"When Compiler Engineers Act as Judges, What Can Possibly Go Wrong?",https://seylaw.blogspot.com/2025/05/when-compiler-engineers-act-as-judges.html,5,1
+43962138,1747052390,1747051200,Spade Hardware Description Language,https://spade-lang.org/,118,60
+43962144,1747052452,1747080000,Ask HN: Should You Include a Certificate in a SAML AuthnRequest?,,5,2
+43962148,1747052493,1747051200,University of Texas-Led Team Solves a Big Problem for Fusion Energy,https://news.utexas.edu/2025/05/05/university-of-texas-led-team-solves-a-big-problem-for-fusion-energy/,287,205
+43962197,1747052951,1747051200,Tesla hiring for Haskell Software engineer,https://old.reddit.com/r/haskell/comments/1kjimug/tesla_hiring_for_haskell_software_engineer/,12,0
+43962207,1747053016,1747051200,CrowdStrike CEO Cuts His Voting Power by 92% with Unexplained Gifts,https://www.bloomberg.com/news/articles/2025-05-12/billionaire-crowdstrike-ceo-cuts-voting-power-by-92-with-unexplained-gifts,126,54
+43962229,1747053194,1747054800,"Apple Considers Raising iPhone Prices, Without Blaming Tariffs",https://www.wsj.com/tech/apple-iphone-price-increase-2eaebb14,17,0
+43962243,1747053376,1747083600,Deepin Desktop Removed from OpenSUSE Due to Packaging Policy Violation,https://linuxiac.com/opensuse-removes-deepin-desktop-over-security-policy-violations/,4,0
+43962320,1747053992,1747054800,"Some Reddit users love to disagree, AI-powered troll-spotting algorithm finds",https://phys.org/news/2025-05-reddit-users-ai-powered-troll.html,7,1
+43962412,1747054661,1747054800,Have you ever seen an emolument fly?,https://reason.com/volokh/2025/05/11/have-you-ever-seen-an-emolument-fly/,44,12
+43962427,1747054759,1747058400,"Show HN: CLI that spots fake GitHub stars, risky dependencies and licence traps",https://github.com/m-ahmed-elbeskeri/Starguard,121,72
+43962503,1747055278,1747054800,A crypto founder faked his death. We found him alive at his dad's house,https://sfstandard.com/2025/05/08/jeffy-yu-zerebro-fake-death/,142,123
+43962528,1747055530,1747058400,The FTC puts off enforcing its 'click-to-cancel' rule,https://www.theverge.com/news/664730/ftc-delay-click-to-cancel-rule,339,212
+43962535,1747055598,1747054800,Gig Companies Violate Workers Rights,https://www.hrw.org/news/2025/05/12/us-major-companies-violate-gig-workers-rights,152,93
+43962662,1747056470,1747054800,"Paul McCartney, Elton John and other creatives demand AI comes clean on scraping",https://www.theregister.com/2025/05/12/uk_creatives_ai_letter/,65,88
+43962770,1747057174,1747058400,Ruby 3.5 Feature: Namespace on read,https://bugs.ruby-lang.org/issues/21311,218,107
+43962942,1747058144,1747058400,Just Fucking Use HTML,https://justfuckingusehtml.com,62,39
+43962992,1747058432,1747062000,Tailscale 4via6 – Connect Edge Deployments at Scale,https://tailscale.com/blog/4via6-connectivity-to-edge-devices,119,38
+43963212,1747059444,1747083600,Americans reconsidering having children or buying a home amid economic anxiety,https://www.theguardian.com/business/2025/may/12/americans-economy-trump-poll,5,0
+43963255,1747059631,1747072800,U.S. inks bill to force geo-tracking tech for high-end gaming and AI GPUs,https://www.tomshardware.com/pc-components/gpus/u-s-inks-bill-to-force-geo-tracking-tech-for-gpus-and-servers-high-end-gaming-gpus-also-subject-to-tracking,9,3
+43963288,1747059744,1747062000,The Audio Stack Is a Crime Scene,https://fireborn.mataroa.blog/blog/i-want-to-love-linux-it-doesnt-love-me-back-post-2-the-audio-stack-is-a-crime-scene/,82,18
+43963397,1747060173,1747062000,Reviving a Modular Cargo Bike Design from the 1930s,https://www.core77.com/posts/136773/Reviving-a-Modular-Cargo-Bike-Design-from-the-1930s,233,182
+43963434,1747060345,1747072800,The Great Displacement Is Already Well Underway,https://shawnfromportland.substack.com/p/the-great-displacement-is-already,513,495
+43963716,1747061537,1747072800,Initial USA Unemployment Claims,https://fred.stlouisfed.org/series/ICSA,37,5
+43963747,1747061671,1747062000,Demonstrably Secure Software Supply Chains with Nix,https://nixcademy.com/posts/secure-supply-chain-with-nix/,117,76
+43963839,1747062168,1747062000,OpenEoX to Standardize End-of-Life (EOL) and End-of-Support (EOS) Information,https://openeox.org/,31,17
+43963868,1747062344,1747062000,Embeddings Are Underrated,https://technicalwriting.dev/ml/embeddings/overview.html,445,135
+43964136,1747063718,1747065600,The Barbican,https://arslan.io/2025/05/12/barbican-estate/,724,254
+43964199,1747064046,1747076400,A brief history of fonts in Mac OS,https://eclecticlight.co/2025/05/03/a-brief-history-of-fonts-in-mac-os/,4,0
+43964200,1747064057,1747080000,"Loko Scheme, an optimizing, bare-metal Scheme compiler",https://scheme.fail/,20,2
+43964201,1747064061,1747065600,Show HN: Airweave – Let agents search any app,https://github.com/airweave-ai/airweave,176,41
+43964209,1747064095,1747065600,'Everybody's Replaceable': The New Ways Bosses Talk About Workers,https://www.wsj.com/lifestyle/workplace/corporate-bosses-workers-culture-changing-cbd19c2c,16,6
+43964304,1747064558,1747065600,Traffic Fatalities Are a Choice,https://asteriskmag.com/issues/10/traffic-fatalities-are-a-choice,118,167
+43964505,1747065691,1747065600,Launch HN: ParaQuery (YC X25) – GPU Accelerated Spark/SQL,,135,81
+43964551,1747065967,1747065600,Perplexity AI's Valuation Surges to $14B in $500M Funding Round,https://www.wsj.com/tech/ai-startup-perplexitys-valuation-surges-to-14-billion-in-fresh-funding-round-26124482,10,2
+43964620,1747066303,1747072800,How to title your blog post or whatever,https://dynomight.net/titles/,96,33
+43964639,1747066394,1747065600,Kennedy Is Right About the Chemicals in Our Food,https://www.nytimes.com/2025/05/12/opinion/kennedy-ultraprocessed-food-dyes.html,5,0
+43964819,1747067324,1747065600,"Google Worried It Couldn't Control How Israel Uses Project Nimbus, Files Reveal",https://theintercept.com/2025/05/12/google-nimbus-israel-military-ai-human-rights/,12,1
+43964827,1747067345,1747069200,RIP Usenix ATC,https://bcantrill.dtrace.org/2025/05/11/rip-usenix-atc/,195,38
+43964885,1747067675,1747065600,Ex-UK Special Forces break silence on 'war crimes' by colleagues,https://www.bbc.com/news/articles/cj3j5gxgz0do,139,80
+43964896,1747067742,1747072800,The Internet 1997 – 2021,https://www.opte.org/the-internet,80,27
+43964937,1747067950,1747069200,I hacked a dating app (and how not to treat a security researcher),https://alexschapiro.com/blog/security/vulnerability/2025/04/21/startups-need-to-take-security-seriously,567,309
+43964939,1747067955,1747069200,"If Everyone Has Trauma, Everyone Has Trauma",https://freddiedeboer.substack.com/p/if-everyone-has-trauma-everyone-has,16,2
+43965099,1747068939,1747069200,Byte Latent Transformer: Patches Scale Better Than Tokens,https://arxiv.org/abs/2412.09871,97,22
+43965354,1747070309,1747072800,U.S. Nuclear Emergency Support aircraft touched down in Pakistan,https://thecommunemag.com/egyptian-plane-with-boron-us-plane-checking-radioactivity-did-india-really-hit-pakistans-nuclear-centres/,9,0
+43965419,1747070805,1747069200,Access to the United States' President for Sale via Meme Coin,https://mastodon.social/@fiete/114495920458503045,8,4
+43965453,1747070988,1747072800,Show HN: The missing inbox for GitHub pull requests,https://github.com/pvcnt/mergeable,26,7
+43965564,1747071516,1747069200,Chegg to lay off 22% of workforce as AI tools shake up edtech industry,https://www.reuters.com/world/americas/chegg-lay-off-22-workforce-ai-tools-shake-up-edtech-industry-2025-05-12/,11,5
+43965608,1747071757,1747072800,HealthBench,https://openai.com/index/healthbench/,173,163
+43965863,1747073015,1747087200,How to practice 'deep reading' (2024),https://www.npr.org/2024/04/30/1196979151/how-to-practice-deep-reading,6,0
+43966012,1747073942,1747076400,Two Claiming to Be Trump Appointees Blocked from Entering US Copyright Office,https://www.wired.com/story/us-copyright-office-trump-takeover/,10,1
+43966014,1747073957,1747087200,Multiplexing,https://buttondown.com/jaffray/archive/multiplexing/,17,0
+43966064,1747074257,1747076400,Toward a Sparse and Interpretable Audio Codec,https://arxiv.org/abs/2505.05654,35,2
+43966089,1747074404,1747076400,Can You Really Trust That Permission Pop-Up on macOS? (CVE-2025-31250),https://wts.dev/posts/tcc-who/,376,251
+43966110,1747074521,1747072800,Germany is building spy satellites to help Ukraine watch Russia without the US,https://euromaidanpress.com/2025/05/10/germany-is-building-spy-satellites-to-help-ukraine-watch-russia-without-the-us/,21,2
+43966200,1747075107,1747080000,Spending <1% of Your Time on Taxes Is a Mistake,https://iriscotax.substack.com/p/spending-1-time-on-taxes-is-a-mistake,8,2
+43966256,1747075478,1747076400,How Ozempic works inside your body,https://www.dailymail.co.uk/health/article-14618581/Ozempic-does-INSIDE-body-DEEP-DIVE.html,6,1
+43966266,1747075562,1747087200,Bippy: A toolkit to hack into react internals,https://www.bippy.dev/,13,0
+43966292,1747075733,1747076400,"Three Faces of American Capitalism: Buffett, Musk, and Trump",https://www.newyorker.com/news/the-financial-page/three-faces-of-american-capitalism-buffett-musk-and-trump,31,5
+43966376,1747076255,1747083600,Director of US copyright office fired after release of AI report,https://www.theguardian.com/us-news/2025/may/12/trump-fires-copyright-office-shira-perlmutter,5,2
+43966422,1747076482,1747076400,A Proven Guide to Building Your Path to Success,https://diamantinoalmeida.com/career-strategy-a-proven-guide-to-building-your-path-to-success/,4,1
+43966456,1747076615,1747076400,"CFPB: Withdrawal of Rules, Policy Statements, and Advisory Opinions Since 2011",https://www.federalregister.gov/documents/2025/05/12/2025-08286/interpretive-rules-policy-statements-and-advisory-opinions-withdrawal,16,1
+43966466,1747076658,1747076400,Timeline of the Far Future,https://en.wikipedia.org/wiki/Timeline_of_the_far_future,15,3
+43966471,1747076703,1747076400,Show HN: Lumoar – Free SOC 2 tool for SaaS startups,https://www.lumoar.com,91,32
+43966694,1747078339,1747080000,Build Your Own Siri. Locally. On-Device. No Cloud,https://thehyperplane.substack.com/p/build-your-own-siri-locally-on-device,185,46
+43966702,1747078384,1747083600,"China's EUV breakthrough: Huawei, SMIC reportedly advancing LDP lithography",https://globalsmtasia.com/chinas-euv-breakthrough-huawei-smic-reportedly-advancing-ldp-lithography-eye-3q25-trial-2026-rollout/,9,1
+43966721,1747078508,1747090800,Kung Fury 2 trailer [video],https://www.youtube.com/watch?v=JQRuka2aJy4,10,0
+43966751,1747078686,1747083600,Trump names Todd Blanche acting librarian of Congress,https://apnews.com/article/trump-library-congress-todd-blanche-carla-hayden-cc2154fa8644a5c29d196e505e4faa51,3,1
+43966785,1747079007,1747080000,Some politicians who share harmful information are rewarded with more clicks,https://theconversation.com/some-politicians-who-share-harmful-information-are-rewarded-with-more-clicks-study-finds-252491,8,0
+43966843,1747079560,1747080000,Why National Labs are investing (heavily) in AI,https://www.lanl.gov/media/publications/1663/0125-qa-jason-pruet,164,148
+43966871,1747079726,1747083600,Eye-tracking study reveals where women and men look when viewing a female butt,https://www.psypost.org/eye-tracking-study-reveals-where-women-and-men-look-when-viewing-a-female-butt/,17,4
+43966917,1747080130,1747080000,Scientists Looking to Leave the U.S. for More Welcoming Environments,https://www.spiegel.de/international/world/exodus-of-expertise-scientists-looking-to-leave-the-u-s-for-more-welcoming-environments-a-989ca73f-1dc9-4205-8405-1dc901c3623a,55,21
+43967175,1747082094,1747083600,Bessent and Chinese minister held a secret meeting in IMF basement 3 weeks ago,https://www.ft.com/content/a541bd15-86b2-4e20-868b-c9ecca57ec09,4,0
+43967179,1747082111,1747083600,"Sam Altman's eye-scanning orbs have arrived, sparking curiosity and fear",https://www.latimes.com/business/story/2025-05-12/dystopian-aesthetic-in-california-sam-altmans-eye-scanning-orbs-spark-curiosity-and-resistance,12,8
+43967181,1747082114,1747087200,Philips will let you fix your trimmer with 3D printable parts and accessories,https://www.theverge.com/news/665187/philips-fixables-3d-printing-personal-health-trimmer-oneblade-prura-research-printables,27,1
+43967207,1747082281,1747083600,China Just Made the Fastest Transistor and It Is Not Made of Silicon,https://www.zmescience.com/science/news-science/china-just-made-the-worlds-fastest-transistor-and-it-is-not-made-of-silicon/,5,0
+43967208,1747082286,1747083600,What if humanity forgot how to make CPUs?,https://twitter.com/lauriewired/status/1922015999118680495,91,129
+43967243,1747082522,1747080000,Memories: Edinburgh ML to Standard ML,https://lawrencecpaulson.github.io/2022/10/05/Standard_ML.html,8,0
+43967282,1747082719,1747083600,The Situation: A Used Plane That Needs Work,https://www.lawfaremedia.org/article/the-situation--a-used-plane-that-needs-work,12,1
+43967376,1747083343,1747090800,Ask HN: Claude 3.7 or Gemini 2.5 Pro?,,8,9
+43967497,1747084305,1747087200,New obesity drugs are coming,https://www.nature.com/articles/d41586-025-00404-9,5,0
+43967642,1747085474,1747090800,"Chinese researchers develop silicon-free transistor, claim efficient and fast",https://www.techradar.com/pro/chinese-researchers-develop-silicon-free-transistor-technology-claimed-to-be-fastest-and-most-efficient-ever-heres-what-we-know,5,0
+43967662,1747085583,1747087200,Multiple Security Issues in Screen,https://security.opensuse.org/2025/05/12/screen-security-issues.html,10,2
+43967785,1747086424,1747087200,2025 EuroLLVM Developers' Meeting,https://www.youtube.com/playlist?list=PL_R5A0lGi1AA3VCp6hZtgJKq4snmBQGDF,6,0
+43967833,1747086871,1747087200,"Qatar-gifted Air Force One may be security, upgrade disaster",https://www.defensenews.com/air/2025/05/12/experts-qatar-gifted-air-force-one-may-be-security-upgrade-disaster/,10,1
+43967899,1747087570,1747090800,You can now export your deep research reports as well-formatted PDFs,https://twitter.com/OpenAI/status/1921998278628901322,14,1
+43967908,1747087673,1747087200,Taleb: IQ is largely a pseudoscientific swindle (Argument Closed),https://medium.com/incerto/iq-is-largely-a-pseudoscientific-swindle-f131c101ba39,9,1
+43967927,1747087840,1747087200,4chan Is Dead. Its Toxic Legacy Is Everywhere,https://www.wired.com/story/4chan-is-dead-its-toxic-legacy-is-everywhere/,3,0
+43967962,1747088112,1747090800,"Wtfis: Passive hostname, domain and IP lookup tool for non-robots",https://github.com/pirxthepilot/wtfis,122,11
+43968043,1747088917,1747090800,Ex-FBI agent: Musk was the target of Russian agents,https://www.zdf.de/nachrichten/politik/trump-musk-putin-100.html,7,0
+43968044,1747088920,1747087200,Ask HN: Is Slack Down?,,68,29
+43968140,1747089682,1747090800,Slack Is Down,https://slack-status.com/2025-05/7b32241eb41a54aa,5,3
+43968141,1747089690,1747090800,Understanding LucasArts' iMUSE System,https://github.com/meshula/LabMidi/blob/main/LabMuse/imuse-technical.md,169,40
+43968278,1747091064,1747090800,Trump executive order demands pharma industry price cuts,https://www.reuters.com/business/healthcare-pharmaceuticals/trump-says-he-will-cut-drug-prices-by-59-2025-05-12/,12,2
+43968290,1747091248,1747090800,Farmers Sued over Deleted Climate Data. So the Government Will Put It Back,https://www.nytimes.com/2025/05/12/climate/trump-deleted-climate-website-farmers-lawsuit.html,45,5
