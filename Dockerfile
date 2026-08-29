@@ -1,23 +1,11 @@
-FROM --platform=$BUILDPLATFORM ghcr.io/vladkens/baseimage/rust:latest AS chef
-
-FROM chef AS planner
-COPY Cargo.toml Cargo.lock .
-RUN /scripts/build prepare
-
-FROM chef AS builder
-COPY --from=planner /app/recipe.json recipe.json
-RUN /scripts/build cook
-COPY . .
-RUN /scripts/build final ynews
-
-FROM alpine:latest
-LABEL org.opencontainers.image.source="https://github.com/vladkens/ynews"
-
-ARG TARGETPLATFORM
+FROM python:3.14-alpine
 WORKDIR /app
-COPY --from=builder /out/ynews/${TARGETPLATFORM} /app/ynews
 
-ENV HOST=0.0.0.0 PORT=8080
-HEALTHCHECK CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:${PORT}/health || exit 1
-EXPOSE ${PORT}
-CMD ["/app/ynews"]
+COPY --from=ghcr.io/astral-sh/uv:0.11.28 /uv /usr/local/bin/uv
+COPY pyproject.toml uv.lock ./
+RUN uv sync --locked --no-dev
+
+COPY collector.py .
+COPY crontab /etc/crontabs/root
+
+CMD ["crond", "-f", "-l", "8", "-L", "/dev/stdout"]

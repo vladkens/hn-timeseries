@@ -1,4 +1,9 @@
-data/
-target/
+.git
+.venv
+.ruff_cache
+__pycache__
+*.py[cod]
+data
+backup
 **/.env
 **/_*.txt

@@ -1,10 +1,18 @@
+.PHONY: prepare update
+
 tag = ynews
 
-dev:
-	cargo watch -q -x 'run'
+prepare:
+	uv sync
+	uv run ruff check --select I --fix .
+	uv run ruff format .
+	uv run ruff format --check .
+	uv run ruff check .
+	uv run ty check
 
 update:
-	cargo upgrade -i
+	uv sync --upgrade --all-groups
+	uv --preview-features audit-command audit
 
 docker-build:
 	docker build --network=host -t $(tag) .
@@ -12,7 +20,7 @@ docker-build:
 
 docker-run: docker-build
 	docker rm --force $(tag) || true
-	docker run --network=host $(args) -p 8080:8080 -v ./data:/app/data --env-file .env --name $(tag) $(tag)
+	docker run --network=host $(args) -v ./data:/data -e DB_PATH=/data/ynews.db --name $(tag) $(tag)
 
 deploy:
 	fly deploy --ha=false

@@ -1,4 +1,6 @@
-/target
-/data
-**/.env
+__pycache__/
+.venv
+*.py[cod]
 **/_*.txt
+**/.env
+/data
