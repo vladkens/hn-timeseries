@@ -3,7 +3,13 @@ name = "ynews"
 version = "0.1.0"
 description = "Hourly Hacker News top-stories collector"
 requires-python = ">=3.14"
-dependencies = ["httpx>=0.28.1", "loguru>=0.7.3"]
+dependencies = [
+    "aiocron>=2.1",
+    "fastapi>=0.141.1",
+    "httpx>=0.28.1",
+    "loguru>=0.7.3",
+    "uvicorn>=0.52.4",
+]
 
 [dependency-groups]
 dev = ["ruff>=0.1.11", "ty>=0.0.41"]

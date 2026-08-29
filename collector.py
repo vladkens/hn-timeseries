@@ -72,12 +72,15 @@ def init_db(db: sqlite3.Connection) -> None:
         url TEXT,
         score INTEGER NOT NULL,
         comments INTEGER NOT NULL,
-        added_at INTEGER DEFAULT (strftime('%s', 'now')),
-        clicks INTEGER DEFAULT 0,
-        tg_msg_id INTEGER
+        added_at INTEGER DEFAULT (strftime('%s', 'now'))
     )
     """
     db.execute(qs)
+
+    cols = {x[1] for x in db.execute("PRAGMA table_info(stories)")}
+    for col in ("clicks", "tg_msg_id"):
+        if col in cols:
+            db.execute(f"ALTER TABLE stories DROP COLUMN {col}")
 
     qs = """
     CREATE TABLE IF NOT EXISTS stories_metrics (
@@ -104,6 +107,30 @@ def init_db(db: sqlite3.Connection) -> None:
     ON stories_metrics(datetime, best_rank)
     """
     db.execute(qs)
+
+
+def migrate_db(db_path: Path) -> None:
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    with sqlite3.connect(db_path, timeout=30) as db:
+        db.execute("PRAGMA busy_timeout = 30000")
+        init_db(db)
+
+
+def save_ranks(db_path: Path, rows: list[tuple[int, int, int]]) -> int:
+    with sqlite3.connect(db_path, timeout=30) as db:
+        db.execute("PRAGMA busy_timeout = 30000")
+        init_db(db)
+        before = db.total_changes
+        db.executemany(
+            """
+            UPDATE stories_metrics
+            SET best_rank = ?
+            WHERE id = ? AND datetime = ?
+              AND (best_rank IS NULL OR best_rank > ?)
+            """,
+            [(rank, story_id, dt, rank) for story_id, dt, rank in rows],
+        )
+        return db.total_changes - before
 
 
 def save_stories(db_path: Path, stories: list[Story], now: int, target_score: int) -> None:
