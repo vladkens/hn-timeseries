@@ -9,6 +9,7 @@
 import argparse
 import asyncio
 import csv
+import json
 import os
 import sqlite3
 import subprocess
@@ -17,8 +18,9 @@ import time
 from collections import defaultdict
 from collections.abc import Generator
 from contextlib import contextmanager
-from dataclasses import dataclass, fields
+from dataclasses import asdict, dataclass, fields
 from datetime import UTC, datetime
+from itertools import groupby
 from pathlib import Path
 
 import httpx
@@ -81,6 +83,52 @@ class Metric:
             self.best_rank = (
                 min(self.best_rank, other.best_rank) if self.best_rank else other.best_rank
             )
+
+
+@dataclass(slots=True)
+class DatasetStats:
+    stories: int
+    metrics: int
+    size_bytes: int
+
+    @classmethod
+    def load(cls, root: Path) -> DatasetStats:
+        story_paths = sorted(root.glob("????-??/stories.csv"))
+        metric_paths = sorted(root.glob("????-??/????-??-??.csv"))
+
+        def count_rows(paths: list[Path]) -> int:
+            count = 0
+            for path in paths:
+                with path.open(newline="", encoding="utf-8") as f:
+                    rows = csv.reader(f)
+                    next(rows, None)
+                    count += sum(1 for _ in rows)
+
+            return count
+
+        paths = story_paths + metric_paths
+        return cls(
+            stories=count_rows(story_paths),
+            metrics=count_rows(metric_paths),
+            size_bytes=sum(path.stat().st_size for path in paths),
+        )
+
+    def save(self, path: Path) -> None:
+        tmp = path.with_name(f"{path.name}.tmp")
+        tmp.write_text(json.dumps(asdict(self), indent=2) + "\n", encoding="utf-8")
+        tmp.replace(path)
+
+    def report(self, before: DatasetStats) -> None:
+        def change(old: int, new: int) -> str:
+            return f"{old:,} -> {new:,} ({new - old:+,})"
+
+        mib = 1024**2
+        logger.info(
+            f"Dataset: stories {change(before.stories, self.stories)}; "
+            f"metrics {change(before.metrics, self.metrics)}; "
+            f"size {before.size_bytes / mib:.1f} -> {self.size_bytes / mib:.1f} MiB "
+            f"({(self.size_bytes - before.size_bytes) / mib:+.1f} MiB)"
+        )
 
 
 async def call_hn(client: httpx.AsyncClient, method: str):
@@ -420,8 +468,9 @@ def merge_stories(path: Path, items: list[Story]) -> None:
     write_stories(path, list(rows.values()))
 
 
-def merge_metrics(path: Path, items: list[Metric]) -> None:
+def merge_metrics(path: Path, items: list[Metric]) -> int:
     rows = load_metrics(path)
+    before = len(rows)
     for metric in items:
         key = (metric.hour, metric.id)
         if current := rows.get(key):
@@ -429,72 +478,87 @@ def merge_metrics(path: Path, items: list[Metric]) -> None:
         else:
             rows[key] = metric
     write_metrics(path, list(rows.values()))
+    return len(rows) - before
 
 
 def export_files(
     db: sqlite3.Connection,
     worktree: DataWorktree,
     start_at: int,
-) -> bool:
+) -> DatasetStats:
     target = worktree.path / "data"
-    grouped: dict[Path, list[Story]] = defaultdict(list)
-    story_ids: set[int] = set()
+    stories: dict[int, Story] = {}
+    known_story_ids = {
+        story_id for path in target.glob("????-??/stories.csv") for story_id in load_stories(path)
+    }
+    stats = DatasetStats.load(target)
+
+    ADDED_AT_FIXED_AT = int(datetime(2026, 8, 29, 19, tzinfo=UTC).timestamp())
 
     rows = db.execute(
         """
-        SELECT s.id, s.created_at, s.added_at, s.title, s.url, s.score, s.comments
+        WITH first_seen AS (
+            SELECT id, MIN(datetime) AS added_at FROM stories_metrics GROUP BY id
+        )
+        SELECT
+            s.id,
+            s.created_at,
+            CASE WHEN f.added_at < ? THEN f.added_at ELSE s.added_at END,
+            s.title,
+            s.url,
+            s.score,
+            s.comments
         FROM stories s
-        WHERE s.added_at > 0 AND EXISTS (SELECT 1 FROM stories_metrics m WHERE m.id = s.id)
+        JOIN first_seen f ON f.id = s.id
         ORDER BY s.id
-        """
+        """,
+        (ADDED_AT_FIXED_AT,),
     )
     for row in rows:
         story = Story(*row)
-        story_ids.add(story.id)
-        grouped[get_story_path(target, story.added_at)].append(story)
+        stories[story.id] = story
 
-    for path, stories in sorted(grouped.items()):
-        merge_stories(path, stories)
-
-    metrics: list[Metric] = []
-    current_path: Path | None = None
-    current_at = start_at
     changed = False
+    metric_rows = db.execute(metric_query(db), (start_at,))
+    for path, day_rows in groupby(
+        metric_rows,
+        key=lambda row: get_metric_path(target, row[1]),
+    ):
+        metrics: list[Metric] = []
+        current_at = start_at
+        for story_id, dt, score, comments, best_rank in day_rows:
+            if story_id not in stories:
+                continue
+            if dt % 3600:
+                raise RuntimeError(f"Metric {story_id} has non-hour timestamp {dt}")
 
-    for row in db.execute(metric_query(db), (start_at,)):
-        story_id, dt, score, comments, best_rank = row
-        if story_id not in story_ids:
-            continue
-        if dt % 3600:
-            raise RuntimeError(f"Metric {story_id} has non-hour timestamp {dt}")
+            current_at = dt
+            hour = datetime.fromtimestamp(dt, UTC).hour
+            metrics.append(Metric(hour, story_id, score, comments, best_rank))
 
-        path = get_metric_path(target, dt)
-        if current_path is not None and path != current_path:
-            merge_metrics(current_path, metrics)
-            if commit_data(worktree, current_at):
-                dat = datetime.fromtimestamp(current_at, UTC)
-                count = len({metric.id for metric in metrics})
-                logger.info(f"Merged {count} stories and {len(metrics)} metrics for {dat:%F}")
-                changed = True
-            metrics = []
+        day_story_ids = {metric.id for metric in metrics}
+        save_stories(target, [stories[story_id] for story_id in day_story_ids])
+        stats.stories += len(day_story_ids - known_story_ids)
+        known_story_ids.update(day_story_ids)
+        stats.metrics += merge_metrics(path, metrics)
+        stats.size_bytes = sum(path.stat().st_size for path in target.glob("????-??/*.csv"))
+        stats.save(worktree.path / "stats.json")
 
-        current_path = path
-        current_at = dt
-        hour = datetime.fromtimestamp(dt, UTC).hour
-        metrics.append(Metric(hour, story_id, score, comments, best_rank))
-
-    if current_path is not None:
-        merge_metrics(current_path, metrics)
         if commit_data(worktree, current_at):
             dat = datetime.fromtimestamp(current_at, UTC)
-            count = len({metric.id for metric in metrics})
-            logger.info(f"Merged {count} stories and {len(metrics)} metrics for {dat:%F}")
+            logger.info(
+                f"Merged {len(day_story_ids)} stories and {len(metrics)} metrics for {dat:%F}"
+            )
             changed = True
 
-    return changed
+    if not changed:
+        dat = datetime.fromtimestamp(start_at, UTC)
+        logger.info(f"No new data after {dat:%F %H}:00 UTC")
+
+    return stats
 
 
-def sql_to_files(source: Path, worktree: DataWorktree) -> None:
+def sql_to_files(source: Path, worktree: DataWorktree) -> DatasetStats:
     if not source.is_file():
         raise FileNotFoundError(source)
 
@@ -526,11 +590,7 @@ def sql_to_files(source: Path, worktree: DataWorktree) -> None:
                 f"dataset already contains data through {current_dat:%F %H}:00 UTC"
             )
 
-        changed = export_files(db, worktree, start_at)
-
-    if not changed:
-        dat = datetime.fromtimestamp(start_at, UTC)
-        logger.info(f"No new data after {dat:%F %H}:00 UTC")
+        return export_files(db, worktree, start_at)
 
 
 def parse_metric_date(path: Path) -> int:
@@ -738,6 +798,9 @@ def commit_git(worktree: Path, *args: str, commit_at: int | None = None) -> None
 
 def commit_data(worktree: DataWorktree, commit_at: int | None = None) -> bool:
     run_git(worktree.path, "add", "data")
+    if (worktree.path / "stats.json").exists():
+        run_git(worktree.path, "add", "stats.json")
+
     diff = run_git(worktree.path, "diff", "--cached", "--quiet", check=False)
     if diff.returncode == 0:
         return False
@@ -801,11 +864,18 @@ def main() -> None:
         match args.command:
             case "collect":
                 now, stories, metrics = asyncio.run(sync_hn())
+                before = DatasetStats.load(data_path)
                 save_data(data_path, stories, metrics, now)
+                after = DatasetStats.load(data_path)
+                after.save(worktree.path / "stats.json")
             case "import":
-                sql_to_files(args.source.resolve(), worktree)
+                before = DatasetStats.load(data_path)
+                after = sql_to_files(args.source.resolve(), worktree)
             case "export":
                 files_to_sql(data_path, args.target.resolve())
+                return
+
+        after.report(before)
 
 
 if __name__ == "__main__":

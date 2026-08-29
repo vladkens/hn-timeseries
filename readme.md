@@ -1,5 +1,15 @@
 # hn-timeseries
 
+<div align="center">
+
+[<img src="https://badges.ws/badge/collecting_since-Nov_2024-orange" alt="collecting since November 2024" />](https://github.com/vladkens/hn-timeseries/tree/data)
+[<img src="https://badges.ws/github/json/vladkens/hn-timeseries/data/stats.json?query=stories&kind=count&label=stories&color=blue&cache=900" alt="stories" />](https://github.com/vladkens/hn-timeseries/tree/data)
+[<img src="https://badges.ws/github/json/vladkens/hn-timeseries/data/stats.json?query=metrics&kind=count&label=observations&color=lime&cache=900" alt="observations" />](https://github.com/vladkens/hn-timeseries/tree/data)
+[<img src="https://badges.ws/github/json/vladkens/hn-timeseries/data/stats.json?query=size_bytes&kind=size&label=dataset%20size&color=cyan&cache=900" alt="dataset size" />](https://github.com/vladkens/hn-timeseries/tree/data)
+[<img src="https://badges.ws/badge/sampling-every_15_min-green" alt="sampling every 15 minutes" />](https://github.com/vladkens/hn-timeseries/actions/workflows/collect.yml)
+
+</div>
+
 Like many people in tech, I read Hacker News. I have always been curious about how submissions reach the top: how quickly they climb, how long they remain visible, and what the ranking algorithm looks like from the outside.
 
 A few years ago, I wrote a small scraper to collect enough data to analyze this. Then I mostly forgot about it, while the collector quietly continued running and gathering data from November 2024 onward.
@@ -38,6 +48,8 @@ Each daily CSV contains one row per story and UTC hour:
 - `best_rank` — best position observed during that hour, where `1` is the highest rank.
 
 Full rank tracking was added in late August 2026. Most earlier rows therefore have no `best_rank`. I reconstructed ranks for some older stories from a separate archive of the top 30, so historical rank values appear occasionally but are limited to positions `1–30`.
+
+For stories first observed before `2026-08-29 19:00 UTC`, `added_at` is reconstructed from the first hourly observation and therefore has one-hour precision. Later records preserve the exact time reported by the collector.
 
 ## Possible uses
 
