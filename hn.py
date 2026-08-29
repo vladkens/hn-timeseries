@@ -1,3 +1,11 @@
+# /// script
+# requires-python = ">=3.14"
+# dependencies = [
+#     "httpx>=0.28.1",
+#     "loguru>=0.7.3",
+# ]
+# ///
+
 import argparse
 import asyncio
 import csv
@@ -126,7 +134,7 @@ class DataWorktree:
 
 def get_story_path(root: Path, added_at: int) -> Path:
     month = datetime.fromtimestamp(added_at, UTC).strftime("%Y-%m")
-    return root / month / "_stories.csv"
+    return root / month / "stories.csv"
 
 
 def get_metric_path(root: Path, dt: int) -> Path:
@@ -234,7 +242,7 @@ def write_metrics(path: Path, rows: list[Metric]) -> None:
 def save_stories(root: Path, stories: list[Story]) -> list[Path]:
     locations = {
         story_id: path
-        for path in root.glob("????-??/_stories.csv")
+        for path in root.glob("????-??/stories.csv")
         for story_id in load_stories(path)
     }
     grouped: dict[Path, list[Story]] = defaultdict(list)
@@ -294,7 +302,7 @@ def check_db(db: sqlite3.Connection) -> None:
 def init_db(db: sqlite3.Connection) -> None:
     db.execute(
         """
-        CREATE TABLE stories (
+        CREATE TABLE IF NOT EXISTS stories (
             id INTEGER PRIMARY KEY,
             created_at INTEGER NOT NULL,
             title TEXT NOT NULL,
@@ -307,7 +315,7 @@ def init_db(db: sqlite3.Connection) -> None:
     )
     db.execute(
         """
-        CREATE TABLE stories_metrics (
+        CREATE TABLE IF NOT EXISTS stories_metrics (
             id INTEGER NOT NULL,
             datetime INTEGER NOT NULL,
             score INTEGER NOT NULL,
@@ -317,6 +325,78 @@ def init_db(db: sqlite3.Connection) -> None:
         )
         """
     )
+
+
+def save_sql(path: Path, stories: list[Story], metrics: list[Metric], now: int) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    dt = now - now % 3600
+
+    with sqlite3.connect(path, timeout=30) as db:
+        db.execute("PRAGMA busy_timeout = 30000")
+        init_db(db)
+        db.executemany(
+            """
+            INSERT INTO stories AS t (id, created_at, title, url, score, comments, added_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(id) DO UPDATE SET
+                score = MAX(t.score, excluded.score),
+                comments = MAX(t.comments, excluded.comments),
+                added_at = CASE
+                    WHEN t.added_at > 0 THEN MIN(t.added_at, excluded.added_at)
+                    ELSE excluded.added_at
+                END
+            """,
+            [
+                (
+                    story.id,
+                    story.created_at,
+                    story.title,
+                    story.url,
+                    story.max_score,
+                    story.max_comments,
+                    story.added_at,
+                )
+                for story in stories
+            ],
+        )
+        db.executemany(
+            """
+            INSERT INTO stories_metrics AS t (id, datetime, score, comments, best_rank)
+            VALUES (?, ?, ?, ?, ?)
+            ON CONFLICT(id, datetime) DO UPDATE SET
+                score = MAX(t.score, excluded.score),
+                comments = MAX(t.comments, excluded.comments),
+                best_rank = MIN(COALESCE(t.best_rank, excluded.best_rank), excluded.best_rank)
+            """,
+            [
+                (metric.id, dt, metric.score, metric.comments, metric.best_rank)
+                for metric in metrics
+            ],
+        )
+        db.execute(
+            """
+            CREATE INDEX IF NOT EXISTS stories_metrics_datetime_rank_idx
+            ON stories_metrics(datetime, best_rank)
+            """
+        )
+
+    dat = datetime.fromtimestamp(dt, UTC)
+    logger.info(f"Saved {len(stories)} stories and {len(metrics)} metrics for {dat:%F %H}:00 UTC")
+
+
+async def serve(path: Path) -> None:
+    while True:
+        try:
+            now, stories, metrics = await sync_hn()
+            save_sql(path, stories, metrics, now)
+        except httpx.HTTPError, sqlite3.Error, OSError, ValueError:
+            logger.exception("Collection failed")
+
+        now = time.time()
+        delay = 15 * 60 - (now - 11 * 60) % (15 * 60)
+        next_run = datetime.fromtimestamp(now + delay, UTC)
+        logger.info(f"Next run at {next_run:%F %H:%M} UTC")
+        await asyncio.sleep(delay)
 
 
 def metric_query(db: sqlite3.Connection) -> str:
@@ -529,7 +609,7 @@ def import_metrics(db: sqlite3.Connection, paths: list[Path], story_ids: set[int
 
 
 def files_to_sql(source: Path, target: Path) -> None:
-    story_paths = sorted(source.glob("????-??/_stories.csv"))
+    story_paths = sorted(source.glob("????-??/stories.csv"))
     metric_paths = sorted(source.glob("????-??/????-??-??.csv"))
     if not story_paths:
         raise FileNotFoundError(f"No dataset found in {source}")
@@ -697,11 +777,23 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Manage the Git-backed Hacker News dataset")
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("collect", help="collect HN and update the data branch")
+    serve_parser = commands.add_parser("serve", help="continuously collect HN into SQLite")
+    serve_parser.add_argument(
+        "target",
+        nargs="?",
+        type=Path,
+        default=Path("data/ynews.db"),
+        help="SQLite database to update",
+    )
     import_parser = commands.add_parser("import", help="merge SQLite into the data branch")
     import_parser.add_argument("source", type=Path, help="SQLite database to merge")
     export_parser = commands.add_parser("export", help="build SQLite from the data branch")
     export_parser.add_argument("target", type=Path, help="new SQLite database to create")
     args = parser.parse_args()
+
+    if args.command == "serve":
+        asyncio.run(serve(args.target.resolve()))
+        return
 
     repo = Path(__file__).resolve().parent
     with open_worktree(repo, repo / ".worktree") as worktree:

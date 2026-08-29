@@ -1,11 +1,14 @@
-.PHONY: prepare update
+.PHONY: prepare update check docker-build docker-run deploy backup
 
-tag = ynews
+tag = hn-timeseries
 
 prepare:
 	uv sync
 	uv run ruff check --select I --fix .
 	uv run ruff format .
+	$(MAKE) check
+
+check:
 	uv run ruff format --check .
 	uv run ruff check .
 	uv run ty check
@@ -20,14 +23,10 @@ docker-build:
 
 docker-run: docker-build
 	docker rm --force $(tag) || true
-	docker run --network=host $(args) -v ./data:/data -e DB_PATH=/data/ynews.db --name $(tag) $(tag)
+	docker run $(args) -v ./data:/data --name $(tag) $(tag)
 
 deploy:
 	fly deploy --ha=false
 
 backup:
 	fly ssh sftp get /data/ynews.db ./data/ynews-$(shell date +%Y%m%d-%H%M).db
-
-import:
-	git branch -D data
-	uv run hn.py import ./data/ynews-20260829-2050.db
