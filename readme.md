@@ -20,7 +20,7 @@ I hope it will be useful for research, experiments, visualizations, or simply un
 
 ## Dataset
 
-The dataset lives in the `data` branch and is organized by UTC month:
+The dataset lives in the orphan [`data` branch](https://github.com/vladkens/hn-timeseries/tree/data), which has no shared Git history with `main`, and is organized by UTC month:
 
 ```text
 2026-08/
