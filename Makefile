@@ -27,3 +27,7 @@ deploy:
 
 backup:
 	fly ssh sftp get /data/ynews.db ./data/ynews-$(shell date +%Y%m%d-%H%M).db
+
+import:
+	git branch -D data
+	uv run hn.py import ./data/ynews-20260829-2050.db

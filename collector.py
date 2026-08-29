@@ -116,23 +116,6 @@ def migrate_db(db_path: Path) -> None:
         init_db(db)
 
 
-def save_ranks(db_path: Path, rows: list[tuple[int, int, int]]) -> int:
-    with sqlite3.connect(db_path, timeout=30) as db:
-        db.execute("PRAGMA busy_timeout = 30000")
-        init_db(db)
-        before = db.total_changes
-        db.executemany(
-            """
-            UPDATE stories_metrics
-            SET best_rank = ?
-            WHERE id = ? AND datetime = ?
-              AND (best_rank IS NULL OR best_rank > ?)
-            """,
-            [(rank, story_id, dt, rank) for story_id, dt, rank in rows],
-        )
-        return db.total_changes - before
-
-
 def save_stories(db_path: Path, stories: list[Story], now: int, target_score: int) -> None:
     db_path.parent.mkdir(parents=True, exist_ok=True)
     dt = now - now % 3600
